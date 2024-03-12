@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Repository
-public interface FlightRepository extends JpaRepository {
+public interface FlightRepository extends JpaRepository<Flight,Integer> {
     Optional<Flight> findByFlightNumber(String flightNumber);
     List<Flight> findByAircraftContaining(String aircraft);
     List<Flight> findByFlightMileageGreaterThan(Integer mileage);
